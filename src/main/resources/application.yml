@@ -1,0 +1,23 @@
+grpc:
+  server:
+    address: 127.0.0.1
+    port: 9900
+  client:
+    education-lesson-service:
+      address: static://127.0.0.1:9900
+      keep-alive-timeout: 5
+
+spring:
+  application:
+    name: education-course-unit-service
+  main:
+    web-application-type: NONE
+  datasource:
+    url: jdbc:postgresql://localhost:5432/education_course_unit_service
+    driver-class-name: org.postgresql.Driver
+    username: education
+    password: education
+  jpa:
+    database: POSTGRESQL
+    hibernate:
+      ddl-auto: none
